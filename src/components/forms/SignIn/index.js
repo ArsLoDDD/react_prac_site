@@ -1,20 +1,19 @@
 import { Formik, Form } from "formik";
 import React from "react";
-import { SCHEMA_SIGN_IN } from "../../utils/schemaValidation";
+import { SCHEMA_SIGN_IN } from "../../../utils/schemaValidation";
 import WrappedInput from "../WrappedInput";
 import styles from "./SignIn.module.scss";
 
-const InitialValues = { email: "", password: "" };
+const initialValues = { email: "", password: "" };
 const SignIn = (props) => {
   const onSubmit = (value, formikbag) => {
-    // formikbag.resetForm();
+    formikbag.resetForm();
   };
   return (
-   
     <Formik
-      InitialValues={InitialValues}
+      initialValues={initialValues}
       validationSchema={SCHEMA_SIGN_IN}
-    //   onSubmit={onSubmit}
+        onSubmit={onSubmit}
     >
       {(formikProps) => {
         return (

@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Home from "./page/Home";
 // import Signup from './components/Header/Signupbutton/index';
-import SignIn from './components/SignIn/index';
+import SignIn from './components/forms/SignIn/index';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Signup" element={<SignIn />} /> // change path
+          <Route path="/signup" element={<SignIn />} /> // change path
 
         </Routes>
       </BrowserRouter>
